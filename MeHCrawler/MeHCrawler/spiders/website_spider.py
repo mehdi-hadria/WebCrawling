@@ -10,6 +10,7 @@ class siteSpider(scrapy.Spider):
 
         for url in self.start_urls:
             yield scrapy.Request(url=url,callback=self.parse)"""
+    # GET SITES TO CRAWL FROM FILE
     def __init__(self,filename=None):
         if filename:
             with open(filename,'r') as f:
